@@ -12,4 +12,4 @@ The command line accept 3 arguments :
 	
 e.g. <pre>java -jar jminer.jar -c 30 -r 20 -a 10</pre> creates a 30x20 grid, and each tile has 10% chances to have a mine. 
 
-![Screenshot](/dist/jminer_screenshot1.png "Screenshot")
+![Screenshot](https://github.com/mw4rf/jminer/blob/master/dist/jminer_screenshot1.png)
