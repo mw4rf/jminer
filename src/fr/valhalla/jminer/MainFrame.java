@@ -89,7 +89,7 @@ public class MainFrame extends Frame {
 				mined = false;
 			// Tile position
 			int x = i / plateauLayout.getColumns();
-			int y = i % plateauLayout.getRows();
+			int y = i % plateauLayout.getColumns();
 			// Make the tile 
 			Tile t = new Tile(plateau, x, y, mined);
 			upPanel.add(t);
