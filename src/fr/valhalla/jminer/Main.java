@@ -12,11 +12,17 @@ import java.util.Random;
 
 
 public class Main {
+	
 	/**
 	 * Launch the game
 	 * @param args
 	 */
 	public static void main(String args[]) {
+		
+		// Get arguments from command line (or use defaults)
+		Configuration.initConfiguration(args);
+		
+		// Build main frame
 		MainFrame mf = new MainFrame();
 		mf.setVisible(true);
 		

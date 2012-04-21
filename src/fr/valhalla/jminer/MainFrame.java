@@ -73,10 +73,10 @@ public class MainFrame extends Frame {
 	
 	private void setup() {
 		// Setup plateau layout
-		PlateauLayout plateauLayout = new PlateauLayout(20,20);
+		PlateauLayout plateauLayout = new PlateauLayout(Configuration.rows,Configuration.cols);
 		upPanel.setLayout(plateauLayout);
 		// Setup plateau
-		int chances = 10; // 10% chances to have a mine 
+		int chances = Configuration.alea; // % chances to have a mine 
 		plateau = new Plateau(this);
 		// Fill plateau with tiles
 		for(int i = 0 ; i < plateauLayout.getSize() ; i++) {
