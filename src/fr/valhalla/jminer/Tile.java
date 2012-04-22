@@ -114,9 +114,9 @@ public class Tile extends Panel implements MouseListener {
 		
 		// Mined tile
 		if(mined) {
+			Sound.mineExploded();
 			label.setText("M");
 			this.setBackground(Color.RED);
-			Sound.mineExploded();
 		}
 		// No mine here
 		else {
