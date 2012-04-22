@@ -14,6 +14,9 @@ public class Sound {
 	
 	public static final String bwaaah = "bwaaah.wav";
 	
+	/**
+	 * Play a "bwaaah" sound when a mine explode.
+	 */
 	public static synchronized void mineExploded() {
 		new Thread(new Runnable() {
 			public void run() {
