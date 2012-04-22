@@ -1,5 +1,8 @@
 package fr.valhalla.jminer;
 
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -16,7 +19,9 @@ public class Sound {
 			public void run() {
 				try {
 					// Init sound tools
-					AudioInputStream inputStream = AudioSystem.getAudioInputStream(Main.class.getResourceAsStream(Sound.bwaaah));
+					InputStream is = Main.class.getResourceAsStream(Sound.bwaaah);
+					InputStream bis = new BufferedInputStream(is); // buffer the stream to avoid the "mark/reset not supported" IOException
+					AudioInputStream inputStream = AudioSystem.getAudioInputStream(bis);
 					AudioFormat audioFormat = inputStream.getFormat();
 					DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, audioFormat);
 					SourceDataLine sourceDataLine = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
